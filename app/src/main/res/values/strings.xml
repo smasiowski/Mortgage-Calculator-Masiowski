@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">Mortgage-Calculator-Masiowski</string>
+    <string name="app_name">Mortgage Calculator</string>
+
+
+    <string name="str_homeValue"></string>
+    <string name="str_loanAmount"></string>
+    <string name="str_interestRate"></string>
+    <string name="str_loanTerm"></string>
+    <string name="str_propertyTax"></string>
+    <string name="str_HOA"></string>
+    <string name="str_homeInsurance"></string>
+
+    <!--
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+-->
+
+
 </resources>

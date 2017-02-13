@@ -10,8 +10,250 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.introtoandroid.mortgage_calculator_masiowski.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:text="HOME VALUE: "
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeLabel"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/homeValue"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_weight="1"
+                android:hint="$"
+                android:text="@string/str_homeValue"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:text="LOAN AMOUNT:  $"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/loanLabel"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/loanAmount"
+                tools:background="@android:drawable/editbox_dropdown_light_frame"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_weight="1"
+                android:hint="$"
+                android:text="@string/str_loanAmount"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:text="INTEREST RATE:  %"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/interestLabel"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="number|numberDecimal"
+                android:ems="10"
+                android:id="@+id/interestRate"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_weight="1"
+                android:hint="%"
+                android:text="@string/str_interestRate"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:text="LOAN TERM: years"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/termLabel"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/loanTerm"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_weight="1"
+                android:hint="years"
+                android:text="@string/str_loanTerm"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.22"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="START DATE:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/startDateLabel"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_marginTop="35dp" />
+
+            <DatePicker
+                android:layout_width="219dp"
+                android:layout_height="90dp"
+                android:id="@+id/startDate"
+                style="@android:style/Widget.DatePicker" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:text="PROPERTY TAX: %"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/taxLabel"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="number|numberDecimal"
+                android:ems="10"
+                android:id="@+id/propertyTax"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_weight="1"
+                android:hint="%"
+                android:text="@string/str_propertyTax"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:text="MONTHLY HOA: $"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/HOALabel"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/monthlyHOA"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_weight="1"
+                android:hint="$"
+                android:text="@string/str_HOA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:text="HOME INSURANCE:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeInsLabel"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/homeIns"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="number"
+                android:ems="10"
+
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_weight="1"
+                android:hint="$/year"
+                android:text="@string/str_homeInsurance"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Mortgage summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mortgageSummaryButton"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:onClick="mortgage" />
+
+            <Button
+                android:text="payment summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/paymentSummaryButton"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:onClick="payment" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
